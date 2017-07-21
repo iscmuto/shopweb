@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "kanri"
+AuthUserFile /var/www/passwd
+require valid-user
