@@ -5,6 +5,7 @@
   $dbPassword = getenv('dbPassword');
 
   function connect() {
+    global $dbHost, $dbUser, $dbPassword;
     return new PDO("mysql:host=$dbHost ;dbname=shop;charset=utf8;", $dbUser, $dbPassword);
   }
 
