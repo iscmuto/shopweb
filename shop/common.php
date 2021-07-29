@@ -1,8 +1,11 @@
 <?php
   session_start();
+  $dbHost = getenv('dbHost');
+  $dbUser = getenv('dbUser');
+  $dbPassword = getenv('dbPassword');
 
   function connect() {
-    return new PDO("mysql:dbname=shop;charset=utf8;", "root");
+    return new PDO("mysql:host=$dbHost ;dbname=shop;charset=utf8;", $dbUser, $dbPassword);
   }
 
   function img_tag($code) {
